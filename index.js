@@ -119,7 +119,7 @@ bot.on('callback_query', async (query) => {
 
     bot.sendMessage(chatId, "⬇️ Yuklanmoqda...")
 
-    const command = `yt-dlp.exe -x --audio-format mp3 --ffmpeg-location "${__dirname}" -o "${filePath}" "${video.url}"`
+    const command = `yt-dlp-x --audio-format mp3 --ffmpeg-location "${__dirname}" -o "${filePath}" "${video.url}"`
 
     exec(command, async (error) => {
       if (error) {
