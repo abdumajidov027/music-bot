@@ -1,4 +1,4 @@
-require('dotenv').config()
+requi re('dotenv').config()
 const TelegramBot = require('node-telegram-bot-api')
 const ytSearch = require('yt-search')
 const { exec } = require('child_process')
