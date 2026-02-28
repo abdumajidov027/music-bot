@@ -1,5 +1,12 @@
 [phases.setup]
-nixPkgs = ["nodejs", "ffmpeg", "yt-dlp"]
+aptPkgs = ["ffmpeg", "curl"]
+
+[phases.install]
+cmds = [
+  "curl -L https://yt-dlp.org/downloads/latest/yt-dlp -o yt-dlp",
+  "chmod +x yt-dlp",
+  "mv yt-dlp /usr/local/bin/yt-dlp"
+]
 
 [start]
 cmd = "node index.js"
